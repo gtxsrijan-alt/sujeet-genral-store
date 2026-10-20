@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="hi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>सुजीत जनरल स्टोर (कबीर उद्यम) व पराग/सुजीत डेयरी | मूसाखांड, यूपी</title>
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Hind and Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- FontAwesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', '"Hind"', 'sans-serif'],
+            hindi: ['"Hind"', 'sans-serif'],
+          },
+          colors: {
+            store: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+              800: '#065f46',
+              900: '#064e3b',
+            },
+            parag: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              200: '#bfdbfe',
+              500: '#2563eb',
+              600: '#1d4ed8',
+              700: '#1e40af',
+              800: '#1e3a8a',
+              900: '#172554',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+
+    .fade-enter {
+      animation: fadeIn 0.25s ease-in-out forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body class="bg-stone-100 text-stone-800 font-sans antialiased min-h-screen flex flex-col selection:bg-store-600 selection:text-white pb-24 lg:pb-0">
+
+  <!-- ================= 1. TOP ANNOUNCEMENT BAR ================= -->
+  <div class="bg-stone-900 text-white text-xs sm:text-sm font-medium py-2 px-3 sm:px-4 shadow-sm border-b border-stone-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1.5 text-center sm:text-left">
+      <div class="flex items-center gap-2 flex-wrap justify-center sm:justify-start">
+        <span class="bg-amber-400 text-stone-950 px-2 py-0.5 rounded text-[11px] font-black uppercase font-hindi tracking-wide shadow-sm">
+          📍 मूसाखांड, यूपी, इंडिया
+        </span>
+        <span class="font-hindi font-medium">सुजीत जनरल स्टोर (कबीर उद्यम) | किराना व पराग/सुजीत डेयरी फार्म</span>
+      </div>
+      <div class="flex items-center gap-3 text-xs">
+        <span class="hidden md:inline font-hindi text-stone-300">संचालक: <strong class="text-white">सुजीत (Sujeet)</strong></span>
+        <span class="hidden sm:inline text-stone-600">|</span>
+        <a href="tel:9935061954" class="bg-store-600 hover:bg-store-500 text-white px-2.5 py-0.5 rounded-full font-bold flex items-center gap-1 transition-colors">
+          <i class="fa-solid fa-phone text-[11px]"></i>
+          <span>9935061954</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 2. MAIN HEADER & DUAL VIEW NAV ================= -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-stone-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20 gap-3 sm:gap-6">
+        
+        <!-- Logo & Store Details -->
+        <div onclick="switchView('store')" class="flex items-center gap-3 cursor-pointer group">
+          <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-store-600 to-parag-600 flex items-center justify-center text-white shadow-md shadow-store-600/20 group-hover:scale-105 transition-transform">
+            <i class="fa-solid fa-shop text-xl"></i>
+          </div>
+          <div>
+            <div class="flex items-center gap-1.5 flex-wrap">
+              <span class="text-lg sm:text-2xl font-black text-stone-900 font-hindi tracking-tight">
+                सुजीत जनरल स्टोर
+              </span>
+              <span class="bg-emerald-100 text-emerald-800 text-xs sm:text-sm font-bold px-2 py-0.5 rounded-md font-hindi border border-emerald-300">
+                (कबीर उद्यम)
+              </span>
+            </div>
+            <p class="text-[11px] sm:text-xs text-stone-500 font-medium font-hindi flex items-center gap-2">
+              <span class="text-emerald-700 font-bold"><i class="fa-solid fa-location-dot"></i> मूसाखांड, यूपी</span>
+              <span class="text-stone-300">|</span>
+              <span>सुजीत: 9935061954</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Desktop Navigation Tabs (Switching between General Store and Dairy Page) -->
+        <nav class="hidden md:flex items-center p-1.5 bg-stone-100 rounded-2xl border border-stone-200 gap-1">
+          <button 
+            id="nav-tab-store" 
+            onclick="switchView('store')" 
+            class="px-4 py-2 rounded-xl text-xs sm:text-sm font-bold font-hindi transition flex items-center gap-2 bg-white text-stone-900 shadow-sm"
+          >
+            <i class="fa-solid fa-basket-shopping text-emerald-600"></i>
+            <span>जनरल स्टोर (किराना)</span>
+          </button>
+          
+          <button 
+            id="nav-tab-dairy" 
+            onclick="switchView('dairy')" 
+            class="px-4 py-2 rounded-xl text-xs sm:text-sm font-bold font-hindi transition flex items-center gap-2 text-stone-600 hover:text-stone-900"
+          >
+            <span class="text-base">🥛</span>
+            <span>पराग व सुजीत डेयरी विभाग</span>
+            <span class="bg-blue-600 text-white text-[10px] font-black px-1.5 py-0.2 rounded-full uppercase">ताज़ा</span>
+          </button>
+        </nav>
+
+        <!-- Right Quick Action Contacts & Mobile Cart Button -->
+        <div class="flex items-center gap-2">
+          <!-- WhatsApp Quick Link -->
+          <a href="https://wa.me/919935061954?text=नमस्ते%20सुजीत%20भैया,%20मुझे%20मूसाखांड%20स्टोर%20से%20सामान%20मंगवाना%20है।" target="_blank" class="hidden sm:inline-flex items-center gap-1.5 bg-emerald-500 hover:bg-emerald-600 text-white text-xs sm:text-sm font-semibold px-3 py-2 rounded-xl shadow-sm transition">
+            <i class="fa-brands fa-whatsapp text-base"></i>
+            <span>व्हाट्सएप</span>
+          </a>
+
+          <!-- Mobile Cart Drawer Trigger -->
+          <button onclick="toggleMobileCartDrawer()" class="lg:hidden relative bg-store-600 hover:bg-store-700 text-white px-3 py-2 rounded-xl shadow-md flex items-center gap-2">
+            <i class="fa-solid fa-calculator text-sm"></i>
+            <span class="text-xs font-bold font-hindi">बिल पर्ची</span>
+            <span id="mobile-cart-badge" class="bg-amber-400 text-stone-900 text-[11px] font-black w-5 h-5 rounded-full flex items-center justify-center">0</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Tab Switcher Bar -->
+      <div class="flex md:hidden border-t border-stone-200 py-2 gap-2">
+        <button 
+          id="mobile-nav-store" 
+          onclick="switchView('store')" 
+          class="flex-1 py-1.5 text-xs font-bold font-hindi rounded-lg bg-emerald-700 text-white flex items-center justify-center gap-1.5"
+        >
+          <i class="fa-solid fa-basket-shopping"></i>
+          <span>जनरल स्टोर (किराना)</span>
+        </button>
+        <button 
+          id="mobile-nav-dairy" 
+          onclick="switchView('dairy')" 
+          class="flex-1 py-1.5 text-xs font-bold font-hindi rounded-lg bg-stone-100 text-stone-700 border border-stone-200 flex items-center justify-center gap-1.5"
+        >
+          <span>🥛</span>
+          <span>पराग व सुजीत डेयरी</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= 3. TOP DYNAMIC HERO / PROMO BANNER ================= -->
+  <!-- Shown when in Store view to advertise Dairy page -->
+  <div id="store-dairy-banner" class="bg-gradient-to-r from-blue-700 via-parag-600 to-indigo-800 text-white py-3.5 px-4 shadow-inner">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3 text-center md:text-left">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-white/20 backdrop-blur flex items-center justify-center text-xl flex-shrink-0">
+          🥛
+        </div>
+        <div>
+          <h2 class="text-sm sm:text-base font-bold font-hindi tracking-wide flex items-center gap-2 justify-center md:justify-start flex-wrap">
+            <span>हमारे यहां डेयरी की भी विशेष सुविधा उपलब्ध है!</span>
+            <span class="bg-amber-400 text-stone-900 text-xs px-2 py-0.5 rounded-full font-black">पराग डेयरी व सुजीत डेयरी</span>
+          </h2>
+          <p class="text-xs text-blue-100 font-hindi mt-0.5">
+            मूसाखांड में शुद्ध गाय का दूध, पराग गोल्ड दूध, मलाई पनीर, दही व छाछ प्रतिदिन उपलब्ध हैं।
+          </p>
+        </div>
+      </div>
+      <button onclick="switchView('dairy')" class="bg-white text-blue-800 hover:bg-blue-50 text-xs sm:text-sm font-bold px-4 py-2 rounded-xl shadow-sm transition font-hindi flex items-center gap-1.5 flex-shrink-0">
+        <span>अलग डेयरी पेज खोलें</span>
+        <i class="fa-solid fa-arrow-right text-xs"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Shown when in Dairy view to switch back to General store -->
+  <div id="dairy-back-banner" class="hidden bg-gradient-to-r from-stone-900 via-emerald-950 to-stone-900 text-white py-3 px-4 shadow-inner">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-3 text-xs sm:text-sm font-hindi">
+      <div class="flex items-center gap-2">
+        <span class="text-amber-400 font-bold">🛒 जनरल किराना स्टोर:</span>
+        <span class="text-stone-300">बिस्किट्स, कुरकुरे, टकाटक, टेढ़े-मेढ़े, सरसों तेल व दालमोट नमकीन चाहिए?</span>
+      </div>
+      <button onclick="switchView('store')" class="text-amber-400 hover:underline font-bold whitespace-nowrap flex items-center gap-1">
+        <span>किराना स्टोर पर वापस जाएं</span>
+        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- ================= 4. MAIN LAYOUT WITH SIDE CALCULATOR ================= -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex-1 w-full">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      
+      <!-- ================= LEFT AREA: VIEW 1 OR VIEW 2 ================= -->
+      <div class="lg:col-span-7 xl:col-span-8 space-y-6">
+
+        <!-- ================= VIEW 1: GENERAL STORE (MAIN) ================= -->
+        <section id="view-store" class="fade-enter space-y-6">
+          
+          <!-- Hero Info for Store -->
+          <div class="bg-white rounded-2xl p-5 border border-stone-200 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <div class="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-800 border border-emerald-200 px-2.5 py-0.5 rounded-full text-xs font-semibold font-hindi mb-2">
+                <i class="fa-solid fa-store text-emerald-600"></i> किराना एवं स्नैक्स विभाग
+              </div>
+              <h1 class="text-xl sm:text-2xl font-black text-stone-900 font-hindi">
+                सुजीत जनरल स्टोर <span class="text-emerald-700">(कबीर उद्यम)</span>
+              </h1>
+              <p class="text-xs sm:text-sm text-stone-500 font-hindi mt-1">
+                मूसाखांड, यूपी | कुरकुरे, टकाटक, टेढ़े-मेढ़े, मशहूर बिस्किट्स, शुद्ध सरसों तेल और स्पेशल दालमोट नमकीन।
+              </p>
+            </div>
+            <div class="text-center sm:text-right flex-shrink-0">
+              <span class="text-xs bg-stone-100 text-stone-700 px-3 py-1.5 rounded-xl font-hindi font-bold border border-stone-200 block">
+                संचालक: सुजीत (9935061954)
+              </span>
+            </div>
+          </div>
+
+          <!-- Store Category Filters & Search -->
+          <div class="flex items-center justify-between flex-wrap gap-3">
+            <div class="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none w-full md:w-auto">
+              <button onclick="filterStoreCategory('all')" class="store-filter-btn px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap transition bg-stone-900 text-white" data-filter="all">
+                सभी सामान
+              </button>
+              <button onclick="filterStoreCategory('snacks')" class="store-filter-btn px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap transition bg-white text-stone-700 border border-stone-200 hover:bg-stone-50" data-filter="snacks">
+                🍿 कुरकुरे, टकाटक, टेढ़े-मेढ़े
+              </button>
+              <button onclick="filterStoreCategory('biscuits')" class="store-filter-btn px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap transition bg-white text-stone-700 border border-stone-200 hover:bg-stone-50" data-filter="biscuits">
+                🍪 बिस्किट्स
+              </button>
+              <button onclick="filterStoreCategory('oil')" class="store-filter-btn px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap transition bg-white text-stone-700 border border-stone-200 hover:bg-stone-50" data-filter="oil">
+                🛢️ सरसों तेल
+              </button>
+              <button onclick="filterStoreCategory('namkeen')" class="store-filter-btn px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap transition bg-white text-stone-700 border border-stone-200 hover:bg-stone-50" data-filter="namkeen">
+                🥜 दालमोट नमकीन
+              </button>
+            </div>
+
+            <!-- Search -->
+            <div class="relative w-full md:w-60">
+              <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-stone-400 text-xs"></i>
+              <input 
+                type="text" 
+                id="store-search-input" 
+                onkeyup="searchStoreProducts()" 
+                placeholder="किराना सामान खोजें..." 
+                class="w-full pl-9 pr-3 py-2 text-xs sm:text-sm bg-white rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 font-hindi"
+              />
+            </div>
+          </div>
+
+          <!-- Store Products Grid -->
+          <div id="store-products-grid" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
+            <!-- Dynamically populated -->
+          </div>
+
+        </section>
+
+        <!-- ================= VIEW 2: DEDICATED DAIRY PAGE ================= -->
+        <section id="view-dairy" class="hidden fade-enter space-y-6">
+          
+          <!-- Dairy Dedicated Banner Header -->
+          <div class="bg-gradient-to-br from-blue-900 via-parag-700 to-indigo-900 rounded-3xl p-6 text-white shadow-xl relative overflow-hidden">
+            <div class="absolute -right-8 -bottom-8 opacity-10 text-9xl">🥛</div>
+            <div class="relative z-10 space-y-3">
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="bg-amber-400 text-stone-950 font-black text-xs px-2.5 py-0.5 rounded-full uppercase tracking-wider">
+                  विशेष डेयरी विभाग
+                </span>
+                <span class="bg-white/20 backdrop-blur text-blue-100 text-xs px-2.5 py-0.5 rounded-full">
+                  📍 मूसाखांड, यूपी, इंडिया
+                </span>
+              </div>
+              <h2 class="text-2xl sm:text-3xl font-extrabold font-hindi">
+                सुजीत डेयरी फार्म एवं पराग डेयरी अधिकृत केंद्र
+              </h2>
+              <p class="text-xs sm:text-sm text-blue-100 font-hindi max-w-2xl leading-relaxed">
+                सुजीत जनरल स्टोर (कबीर उद्यम) के अंतर्गत मूसाखांड में उपलब्ध 100% शुद्ध ताज़ा गाय का दूध, पराग गोल्ड, पराग टोंड, ताज़ा मलाईदार पनीर, गाढ़ा दही, देशी मक्खन एवं मसाला छाछ।
+              </p>
+
+              <!-- Timings & Highlights Grid -->
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-3 text-xs font-hindi">
+                <div class="bg-white/10 backdrop-blur rounded-xl p-3 border border-white/10">
+                  <p class="text-amber-300 font-bold"><i class="fa-solid fa-clock"></i> सुबह का समय:</p>
+                  <p class="font-bold text-white text-sm">6:00 AM से 10:00 AM</p>
+                  <p class="text-[11px] text-blue-200">ताज़ा दुहाई का दूध व पराग पैकेट</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur rounded-xl p-3 border border-white/10">
+                  <p class="text-amber-300 font-bold"><i class="fa-solid fa-moon"></i> शाम का समय:</p>
+                  <p class="font-bold text-white text-sm">4:00 PM से 8:00 PM</p>
+                  <p class="text-[11px] text-blue-200">शाम का ताज़ा दूध व पनीर</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur rounded-xl p-3 border border-white/10">
+                  <p class="text-amber-300 font-bold"><i class="fa-solid fa-calendar-check"></i> मासिक दूध बंधाई:</p>
+                  <p class="font-bold text-white text-sm">डेली होम डिलीवरी</p>
+                  <p class="text-[11px] text-blue-200">मूसाखांड में महीने भर का दूध बंधवाएं</p>
+                </div>
+              </div>
+
+              <!-- Quick Dairy WhatsApp Inquiry Buttons -->
+              <div class="pt-3 flex items-center gap-3 flex-wrap">
+                <a 
+                  href="https://wa.me/919935061954?text=नमस्ते%20सुजीत%20भैया,%20मुझे%20मूसाखांड%20में%20डेली%20दूध%20बंधवाने%20के%20बारे%20में%20जानकारी%20चाहिए।" 
+                  target="_blank" 
+                  class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs sm:text-sm px-4 py-2.5 rounded-xl shadow-md transition flex items-center gap-2 font-hindi"
+                >
+                  <i class="fa-brands fa-whatsapp text-base"></i>
+                  <span>मासिक दूध बंधवाने हेतु WhatsApp करें</span>
+                </a>
+                <a 
+                  href="https://wa.me/919935061954?text=नमस्ते%20सुजीत%20भैया,%20शादी/पार्टी/कार्यक्रम%20के%20लिए%20थोक%20दूध%20और%20पनीर%20का%20ऑर्डर%20देना%20है।" 
+                  target="_blank" 
+                  class="bg-white/20 hover:bg-white/30 text-white font-bold text-xs sm:text-sm px-4 py-2.5 rounded-xl transition flex items-center gap-2 font-hindi border border-white/20"
+                >
+                  <i class="fa-solid fa-champagne-glasses text-xs"></i>
+                  <span>शादी/कार्यक्रम हेतु थोक पनीर-दूध ऑर्डर</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dairy Brand Filter Tabs -->
+          <div class="flex items-center justify-between flex-wrap gap-3">
+            <div class="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none w-full md:w-auto">
+              <button onclick="filterDairyCategory('all')" class="dairy-filter-btn px-4 py-1.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap transition bg-parag-700 text-white" data-dairyfilter="all">
+                सभी डेयरी उत्पाद
+              </button>
+              <button onclick="filterDairyCategory('sujeet')" class="dairy-filter-btn px-4 py-1.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap transition bg-white text-stone-700 border border-stone-200 hover:bg-stone-50" data-dairyfilter="sujeet">
+                🐄 सुजीत डेयरी फार्म उत्पाद
+              </button>
+              <button onclick="filterDairyCategory('parag')" class="dairy-filter-btn px-4 py-1.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap transition bg-white text-stone-700 border border-stone-200 hover:bg-stone-50" data-dairyfilter="parag">
+                🥛 पराग डेयरी अधिकृत उत्पाद
+              </button>
+            </div>
+
+            <!-- Search for Dairy -->
+            <div class="relative w-full md:w-60">
+              <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-stone-400 text-xs"></i>
+              <input 
+                type="text" 
+                id="dairy-search-input" 
+                onkeyup="searchDairyProducts()" 
+                placeholder="दूध, पनीर, दही खोजें..." 
+                class="w-full pl-9 pr-3 py-2 text-xs sm:text-sm bg-white rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-blue-500 font-hindi"
+              />
+            </div>
+          </div>
+
+          <!-- Dairy Products Grid -->
+          <div id="dairy-products-grid" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
+            <!-- Dynamically populated -->
+          </div>
+
+          <!-- Special Notice Box -->
+          <div class="bg-amber-50 border border-amber-200 rounded-2xl p-4 text-xs font-hindi text-amber-900 flex items-start gap-3">
+            <i class="fa-solid fa-circle-info text-amber-600 text-base mt-0.5"></i>
+            <div>
+              <p class="font-bold text-sm">मूसाखांड वासियों के लिए विशेष सूचना:</p>
+              <p class="mt-0.5 text-stone-700">सुजीत डेयरी का ताज़ा गाय का दूध पूरी तरह प्राकृतिक और केमिकल मुक्त होता है। पराग डेयरी के सभी पैकेट्स सीलबंद और कोल्ड स्टोरेज में रखे जाते हैं। किसी भी जानकारी के लिए सीधे सुजीत भैया (9935061954) से संपर्क करें।</p>
+            </div>
+          </div>
+
+        </section>
+
+      </div>
+
+      <!-- ================= RIGHT: PERSISTENT SIDE BILLING CALCULATOR (Desktop) ================= -->
+      <!-- Calculates items from BOTH General Store & Dairy Page in Real Time -->
+      <aside class="hidden lg:block lg:col-span-5 xl:col-span-4 sticky top-28">
+        <div class="bg-white rounded-2xl border border-stone-200 shadow-xl overflow-hidden flex flex-col">
+          
+          <!-- Header -->
+          <div class="bg-stone-900 text-white px-5 py-4 flex items-center justify-between">
+            <div>
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-receipt text-emerald-400"></i>
+                <h3 class="font-bold text-base font-hindi">लाइव बिल पर्ची कैलकुलेटर</h3>
+              </div>
+              <p class="text-[11px] text-stone-400 font-hindi">किराना व डेयरी दोनों का संयुक्त बिल</p>
+            </div>
+            <button onclick="clearEntireCart()" title="पर्ची साफ़ करें" class="text-xs text-stone-400 hover:text-rose-400 transition flex items-center gap-1 font-hindi">
+              <i class="fa-regular fa-trash-can"></i>
+              <span>खाली करें</span>
+            </button>
+          </div>
+
+          <!-- Items Table / Container -->
+          <div id="desktop-cart-items" class="max-h-72 overflow-y-auto p-4 divide-y divide-stone-100">
+            <!-- Dynamic Cart Items -->
+          </div>
+
+          <!-- Real-Time Calculation Sub-Panel -->
+          <div class="bg-stone-50 p-4 border-t border-stone-200 space-y-2 font-hindi text-xs sm:text-sm">
+            <div class="flex justify-between text-stone-600">
+              <span>सामान मूल्य (Subtotal):</span>
+              <span id="calc-subtotal" class="font-bold text-stone-900 font-sans">₹0</span>
+            </div>
+            
+            <div class="flex justify-between text-stone-600">
+              <span class="flex items-center gap-1">
+                मूसाखांड डिलीवरी:
+                <span class="text-[10px] bg-emerald-100 text-emerald-800 px-1.5 py-0.2 rounded font-bold">फ्री</span>
+              </span>
+              <span id="calc-delivery" class="font-bold text-stone-900 font-sans">₹0</span>
+            </div>
+
+            <div class="flex justify-between text-emerald-700 font-medium">
+              <span>आपकी कुल बचत (Savings):</span>
+              <span id="calc-savings" class="font-bold font-sans">₹0</span>
+            </div>
+
+            <div class="pt-2 border-t border-stone-200 flex justify-between items-baseline">
+              <div>
+                <span class="text-sm font-bold text-stone-900 font-hindi block">कुल देय राशि (Grand Total):</span>
+                <span class="text-[10px] text-stone-500 font-hindi">COD या UPI द्वारा भुगतान</span>
+              </div>
+              <span id="calc-grand-total" class="text-2xl font-black text-emerald-700 font-sans">₹0</span>
+            </div>
+          </div>
+
+          <!-- Customer Address & WhatsApp Order -->
+          <div class="p-4 bg-white border-t border-stone-100 space-y-3">
+            <div>
+              <label for="cust-address-desktop" class="block text-[11px] font-bold text-stone-600 uppercase font-hindi mb-1">
+                आपका नाम व मूसाखांड पता (वैकल्पिक):
+              </label>
+              <input 
+                type="text" 
+                id="cust-address-desktop" 
+                placeholder="उदा. राहुल, पुराना शिव मंदिर, मूसाखांड" 
+                class="w-full text-xs p-2.5 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 font-hindi"
+              />
+            </div>
+
+            <button 
+              id="desktop-whatsapp-order-btn" 
+              onclick="sendWhatsAppOrder('desktop')" 
+              class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-4 rounded-xl shadow-md transition flex items-center justify-center gap-2 font-hindi text-sm disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+              <span>सुजीत भैया को बिल भेजें (9935061954)</span>
+            </button>
+            <p class="text-[11px] text-center text-stone-400 font-hindi">
+              सुजीत जनरल स्टोर (कबीर उद्यम) - मूसाखांड, यूपी
+            </p>
+          </div>
+
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- ================= 5. MOBILE BOTTOM STICKY SUMMARY BAR ================= -->
+  <div class="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-stone-200 p-3 shadow-2xl z-40 flex items-center justify-between gap-3">
+    <div onclick="toggleMobileCartDrawer()" class="cursor-pointer">
+      <div class="flex items-center gap-1.5">
+        <span id="mobile-total-price" class="text-xl font-extrabold text-emerald-700 font-sans">₹0</span>
+        <span class="text-[11px] bg-stone-100 text-stone-700 px-2 py-0.5 rounded font-hindi font-bold">
+          <span id="mobile-items-count">0</span> सामान
+        </span>
+      </div>
+      <p class="text-[11px] text-stone-500 font-hindi flex items-center gap-1">
+        <span>पर्ची व हिसाब देखें</span> <i class="fa-solid fa-chevron-up text-[10px]"></i>
+      </p>
+    </div>
+
+    <button 
+      onclick="toggleMobileCartDrawer()" 
+      class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm px-4 py-2.5 rounded-xl flex items-center gap-2 shadow-md font-hindi"
+    >
+      <i class="fa-brands fa-whatsapp text-base"></i>
+      <span>ऑर्डर भेजें (9935061954)</span>
+    </button>
+  </div>
+
+  <!-- ================= 6. MOBILE FULL BILL CALCULATOR DRAWER ================= -->
+  <div id="mobile-cart-drawer" class="fixed inset-0 bg-stone-950/60 backdrop-blur-sm z-50 hidden transition-opacity">
+    <div class="absolute bottom-0 left-0 right-0 max-h-[85vh] bg-white rounded-t-3xl shadow-2xl flex flex-col overflow-hidden">
+      
+      <!-- Drawer Header -->
+      <div class="p-4 bg-stone-900 text-white flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-calculator text-emerald-400"></i>
+          <div>
+            <h3 class="font-bold text-base font-hindi">सुजीत जनरल स्टोर (कबीर उद्यम)</h3>
+            <p class="text-[11px] text-stone-300 font-hindi">मूसाखांड | लाइव बिल कैलकुलेटर</p>
+          </div>
+        </div>
+        <button onclick="toggleMobileCartDrawer()" class="w-8 h-8 rounded-full bg-stone-800 text-stone-300 flex items-center justify-center font-bold">
+          ✕
+        </button>
+      </div>
+
+      <!-- Itemized list -->
+      <div id="mobile-drawer-items" class="p-4 overflow-y-auto divide-y divide-stone-100 flex-1 max-h-60">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <!-- Cost Breakdown -->
+      <div class="bg-stone-50 p-4 border-t border-stone-200 space-y-2 text-xs font-hindi">
+        <div class="flex justify-between text-stone-600">
+          <span>सामान मूल्य (Subtotal):</span>
+          <span id="mobile-calc-subtotal" class="font-bold text-stone-900 font-sans">₹0</span>
+        </div>
+        <div class="flex justify-between text-stone-600">
+          <span>मूसाखांड होम डिलीवरी:</span>
+          <span class="font-bold text-emerald-700 font-sans">फ्री (FREE)</span>
+        </div>
+        <div class="flex justify-between text-emerald-700">
+          <span>आपकी बचत:</span>
+          <span id="mobile-calc-savings" class="font-bold font-sans">₹0</span>
+        </div>
+        <div class="pt-2 border-t border-stone-200 flex justify-between items-center text-sm">
+          <span class="font-bold text-stone-900">कुल देय राशि (Grand Total):</span>
+          <span id="mobile-calc-grand-total" class="text-xl font-black text-emerald-700 font-sans">₹0</span>
+        </div>
+      </div>
+
+      <!-- Address & Send WhatsApp Button -->
+      <div class="p-4 bg-white border-t border-stone-100 space-y-3">
+        <input 
+          type="text" 
+          id="cust-address-mobile" 
+          placeholder="अपना नाम व मूसाखांड पता लिखें..." 
+          class="w-full text-xs p-3 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 font-hindi"
+        />
+        <div class="flex gap-2">
+          <button onclick="clearEntireCart()" class="px-3 py-3 rounded-xl bg-stone-100 text-stone-600 text-xs font-hindi font-bold">
+            खाली करें
+          </button>
+          <button 
+            onclick="sendWhatsAppOrder('mobile')" 
+            class="flex-1 bg-emerald-600 text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 font-hindi text-sm"
+          >
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+            <span>व्हाट्सएप पर ऑर्डर भेजें (9935061954)</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= 7. FOOTER ================= -->
+  <footer class="bg-stone-900 text-stone-400 mt-12 text-xs font-hindi border-t border-stone-800">
+    <div class="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
+      <div>
+        <h4 class="text-white text-base font-bold mb-2">सुजीत जनरल स्टोर (कबीर उद्यम)</h4>
+        <p class="text-stone-400 text-xs leading-relaxed">
+          मूसाखांड में हर घर की पसंद — लोकप्रिय स्नैक्स (कुरकुरे, टकाटक, टेढ़े-मेढ़े), बिस्किट्स, शुद्ध सरसों का तेल, दालमोट नमकीन और सुजीत डेयरी व पराग डेयरी के ताज़ा उत्पाद।
+        </p>
+      </div>
+      <div>
+        <h4 class="text-white text-sm font-bold mb-2">दुकान का पता व समय</h4>
+        <p>📍 मूसाखांड, सुजीत जनरल स्टोर, यूपी, इंडिया</p>
+        <p>दुकान संचालक: <strong class="text-stone-200">सुजीत (Sujeet)</strong></p>
+        <p>⏰ किराना दुकान: सुबह 6:00 AM से रात 10:00 PM</p>
+        <p>🥛 डेयरी दुहाई समय: 6:00 - 10:00 AM | 4:00 - 8:00 PM</p>
+      </div>
+      <div>
+        <h4 class="text-white text-sm font-bold mb-2">सीधा संपर्क व बुकिंग</h4>
+        <p class="text-emerald-400 font-bold text-sm mb-1">
+          <i class="fa-solid fa-phone"></i> 9935061954
+        </p>
+        <p class="text-stone-400">फोन या व्हाट्सएप पर लिस्ट भेजकर मूसाखांड में होम डिलीवरी प्राप्त करें।</p>
+      </div>
+    </div>
+    <div class="border-t border-stone-800 py-4 text-center text-[11px] text-stone-500">
+      © <span id="current-year"></span> सुजीत जनरल स्टोर (कबीर उद्यम) | मूसाखांड, यूपी, इंडिया
+    </div>
+  </footer>
+
+  <!-- ================= 8. JAVASCRIPT LOGIC ================= -->
+  <script>
+    // Product Catalog Database: Separated into General Store and Dedicated Dairy
+    const storeProducts = [
+      // 1. SNACKS (कुरकुरे, टकाटक, टेढ़े-मेढ़े)
+      {
+        id: 'snk-1',
+        section: 'store',
+        category: 'snacks',
+        name: 'कुरकुरे मसाला मंच (Kurkure Masala Munch)',
+        weight: '75g पैकेट',
+        price: 20,
+        mrp: 20,
+        tag: 'मसाला मंच',
+        icon: '🌶️',
+        desc: 'क्रंची और चटपटा स्वाद, हर शाम की चाय का साथी।'
+      },
+      {
+        id: 'snk-2',
+        section: 'store',
+        category: 'snacks',
+        name: 'टकाटक चटपटा मसाला (Taka Tak Chatpata)',
+        weight: '80g पैकेट',
+        price: 20,
+        mrp: 20,
+        tag: 'टकाटक स्पेशल',
+        icon: '🍟',
+        desc: 'मसालेदार और क्रिस्पी फिंगर स्नैक्स।'
+      },
+      {
+        id: 'snk-3',
+        section: 'store',
+        category: 'snacks',
+        name: 'बिंगो टेढ़े-मेढ़े मसाला तड़का (Tedhe Medhe)',
+        weight: '85g पैकेट',
+        price: 20,
+        mrp: 20,
+        tag: 'मसाला तड़का',
+        icon: '🥨',
+        desc: 'अनोखा टेढ़ा आकार और तीखा-चटपटा मसाला।'
+      },
+      {
+        id: 'snk-4',
+        section: 'store',
+        category: 'snacks',
+        name: 'कुरकुरे ग्रीन चटनी (Kurkure Green Chutney)',
+        weight: '45g पैकेट',
+        price: 10,
+        mrp: 10,
+        tag: 'चटनी फ्लेवर',
+        icon: '🥗',
+        desc: 'ताज़ी पुदीना-धनिया चटनी का तीखा फ्लेवर।'
+      },
+
+      // 2. BISCUITS (बिस्किट्स)
+      {
+        id: 'bsc-1',
+        section: 'store',
+        category: 'biscuits',
+        name: 'पारले-जी ग्लूकोज बिस्कुट (Parle-G Family)',
+        weight: '800g पैक',
+        price: 68,
+        mrp: 75,
+        tag: 'पारिवारिक पैक',
+        icon: '🍪',
+        desc: 'भारत का सबसे भरोसेमंद चाय बिस्कुट।'
+      },
+      {
+        id: 'bsc-2',
+        section: 'store',
+        category: 'biscuits',
+        name: 'ब्रिटानिया गुड डे बटर (Britannia Good Day)',
+        weight: '600g पैक',
+        price: 75,
+        mrp: 85,
+        tag: 'बटर कुकीज',
+        icon: '🧈',
+        desc: 'असली बटर की खुशबू और मीठी मुस्कान।'
+      },
+      {
+        id: 'bsc-3',
+        section: 'store',
+        category: 'biscuits',
+        name: 'ब्रिटानिया मेरी गोल्ड (Britannia Marie Gold)',
+        weight: '300g पैक',
+        price: 35,
+        mrp: 40,
+        tag: 'टी टाइम',
+        icon: '☕',
+        desc: 'हल्का और पौष्टिक, चाय में डुबोने के लिए बेस्ट।'
+      },
+      {
+        id: 'bsc-4',
+        section: 'store',
+        category: 'biscuits',
+        name: 'कैडबरी ओरियो ओरिजिनल (Oreo Cream Biscuit)',
+        weight: '120g पैक',
+        price: 30,
+        mrp: 35,
+        tag: 'क्रीम बिस्कुट',
+        icon: '🍫',
+        desc: 'चॉकलेट कुकी और रिच वैनिला क्रीम लेयर।'
+      },
+
+      // 3. MUSTARD OIL (सरसों का तेल)
+      {
+        id: 'oil-1',
+        section: 'store',
+        category: 'oil',
+        name: 'बैल कोल्हू शुद्ध कच्ची घानी सरसों का तेल',
+        weight: '1 लीटर पाउच',
+        price: 145,
+        mrp: 160,
+        tag: '100% शुद्ध घानी',
+        icon: '🛢️',
+        desc: 'असली तीखापन और शुद्धता, सब्जियों का असली स्वाद।'
+      },
+      {
+        id: 'oil-2',
+        section: 'store',
+        category: 'oil',
+        name: 'फॉर्च्यून कच्ची घानी सरसों तेल (Fortune Oil)',
+        weight: '1 लीटर बॉटल',
+        price: 155,
+        mrp: 170,
+        tag: 'प्रीमियम बॉटल',
+        icon: '🧴',
+        desc: 'नेचुरल ओमेगा-3 और बेहतरीन महक से भरपूर।'
+      },
+      {
+        id: 'oil-3',
+        section: 'store',
+        category: 'oil',
+        name: 'बैल कोल्हू कच्ची घानी सरसों तेल (छोटा पैक)',
+        weight: '500ml पाउच',
+        price: 78,
+        mrp: 85,
+        tag: 'छोटा पैक',
+        icon: '🛢️',
+        desc: 'रोजाना के उपयोग के लिए सुविधाजनक पैक।'
+      },
+
+      // 4. NAMKEEN (दालमोट नमकीन)
+      {
+        id: 'nmk-1',
+        section: 'store',
+        category: 'namkeen',
+        name: 'स्पेशल दालमोट नमकीन (Special Dalmoth)',
+        weight: '400g पैक',
+        price: 85,
+        mrp: 95,
+        tag: 'दुकान की खास',
+        icon: '🥜',
+        desc: 'तली हुई भुनी मसूर दाल, काजू और मसालों का कुरकुरा मेल।'
+      },
+      {
+        id: 'nmk-2',
+        section: 'store',
+        category: 'namkeen',
+        name: 'शाही दालमोट नमकीन (Shahi Dalmoth)',
+        weight: '500g जंबो पैक',
+        price: 110,
+        mrp: 125,
+        tag: 'शाही स्वाद',
+        icon: '🌰',
+        desc: 'काजू, किशमिश और भुने मसालों से युक्त रिच दालमोट।'
+      },
+      {
+        id: 'nmk-3',
+        section: 'store',
+        category: 'namkeen',
+        name: 'हल्दीराम / बीकाजी आलू भुजिया नमकीन',
+        weight: '400g पैक',
+        price: 90,
+        mrp: 100,
+        tag: 'क्रंची टेस्ट',
+        icon: '🥨',
+        desc: 'पोदीना और आलू के लच्छों का क्लासिक चटपटा स्वाद।'
+      }
+    ];
+
+    const dairyProducts = [
+      // 1. SUJEET DAIRY SPECIALS
+      {
+        id: 'dry-1',
+        section: 'dairy',
+        category: 'sujeet',
+        name: 'सुजीत डेयरी शुद्ध ताज़ा गाय का दूध',
+        weight: '1 लीटर (ताज़ा)',
+        price: 55,
+        mrp: 60,
+        tag: 'सुजीत डेयरी फार्म',
+        icon: '🐄',
+        desc: 'मूसाखांड में फार्म से सीधा निकाला गया बिना मिलावट का शुद्ध गाय का दूध।'
+      },
+      {
+        id: 'dry-2',
+        section: 'dairy',
+        category: 'sujeet',
+        name: 'सुजीत डेयरी शुद्ध ताज़ा गाय का दूध (आधा लीटर)',
+        weight: '500ml (ताज़ा)',
+        price: 28,
+        mrp: 30,
+        tag: 'सुजीत डेयरी',
+        icon: '🥛',
+        desc: 'दैनिक चाय और बच्चों के लिए सुबह-शाम ताज़ा उपलब्ध।'
+      },
+      {
+        id: 'dry-3',
+        section: 'dairy',
+        category: 'sujeet',
+        name: 'सुजीत डेयरी ताज़ा मलाईदार पनीर',
+        weight: '250g (ताज़ा खुला/पैक)',
+        price: 105,
+        mrp: 115,
+        tag: 'सुजीत डेयरी स्पेशल',
+        icon: '🧀',
+        desc: 'सॉफ्ट, स्पंजी और शुद्ध मलाई पनीर, मटर पनीर व शाही पनीर के लिए उत्तम।'
+      },
+      {
+        id: 'dry-4',
+        section: 'dairy',
+        category: 'sujeet',
+        name: 'सुजीत डेयरी शुद्ध देशी मक्खन (White Butter)',
+        weight: '250g पैक',
+        price: 130,
+        mrp: 145,
+        tag: 'घर का मक्खन',
+        icon: '🧈',
+        desc: 'ताज़ा मथे हुए दूध की मलाई से बना बिना नमक का शुद्ध देशी मक्खन।'
+      },
+
+      // 2. PARAG DAIRY PRODUCTS
+      {
+        id: 'dry-5',
+        section: 'dairy',
+        category: 'parag',
+        name: 'पराग गोल्ड फुल क्रीम दूध (Parag Gold)',
+        weight: '500ml पाउच',
+        price: 33,
+        mrp: 33,
+        tag: 'पराग डेयरी',
+        icon: '🥛',
+        desc: 'गाढ़ा और मलाईदार पाश्चुरीकृत दूध, खीर और गाढ़ी चाय के लिए लोकप्रिय।'
+      },
+      {
+        id: 'dry-6',
+        section: 'dairy',
+        category: 'parag',
+        name: 'पराग टोंड मिल्क (Parag Toned Milk)',
+        weight: '500ml पाउच',
+        price: 27,
+        mrp: 27,
+        tag: 'पराग डेयरी',
+        icon: '🥛',
+        desc: 'हल्का और पौष्टिक दूध, दैनिक स्वास्थ्य के लिए उपयुक्त।'
+      },
+      {
+        id: 'dry-7',
+        section: 'dairy',
+        category: 'parag',
+        name: 'पराग ताज़ा सादा/मीठा दही (Parag Dahi)',
+        weight: '400g कप',
+        price: 40,
+        mrp: 45,
+        tag: 'पराग डेयरी',
+        icon: '🥣',
+        desc: 'प्राकृतिक रूप से जमाया हुआ गाढ़ा, स्वादिष्ट और शुद्ध दही।'
+      },
+      {
+        id: 'dry-8',
+        section: 'dairy',
+        category: 'parag',
+        name: 'पराग मसाला छाछ (Parag Masala Chhachh)',
+        weight: '200ml पाउच',
+        price: 15,
+        mrp: 15,
+        tag: 'पराग डेयरी',
+        icon: '🥤',
+        desc: 'जीरा और पुदीना स्वाद से भरपूर पाचक ठंडी छाछ।'
+      }
+    ];
+
+    // Combined catalog for easy ID-lookup
+    const allProducts = [...storeProducts, ...dairyProducts];
+
+    // Cart State in LocalStorage
+    const CART_STORAGE_KEY = 'sujeet_general_dairy_cart_v3';
+    let cart = JSON.parse(localStorage.getItem(CART_STORAGE_KEY) || '{}');
+
+    // UI View State ('store' or 'dairy')
+    let currentView = 'store';
+    let storeCategoryFilter = 'all';
+    let dairyCategoryFilter = 'all';
+
+    // Search query states
+    let storeSearch = '';
+    let dairySearch = '';
+
+    // Initialize on load
+    window.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+      renderStoreProducts();
+      renderDairyProducts();
+      recalculateCart();
+    });
+
+    // View Switching Function (General Store <-> Dedicated Dairy Page)
+    function switchView(viewName) {
+      currentView = viewName;
+
+      const viewStore = document.getElementById('view-store');
+      const viewDairy = document.getElementById('view-dairy');
+      const storeDairyBanner = document.getElementById('store-dairy-banner');
+      const dairyBackBanner = document.getElementById('dairy-back-banner');
+
+      const navTabStore = document.getElementById('nav-tab-store');
+      const navTabDairy = document.getElementById('nav-tab-dairy');
+      const mobileNavStore = document.getElementById('mobile-nav-store');
+      const mobileNavDairy = document.getElementById('mobile-nav-dairy');
+
+      if (viewName === 'store') {
+        // Show Store, Hide Dairy
+        viewStore.classList.remove('hidden');
+        viewDairy.classList.add('hidden');
+        storeDairyBanner.classList.remove('hidden');
+        dairyBackBanner.classList.add('hidden');
+
+        // Style Desktop Nav
+        navTabStore.className = "px-4 py-2 rounded-xl text-xs sm:text-sm font-bold font-hindi transition flex items-center gap-2 bg-white text-stone-900 shadow-sm";
+        navTabDairy.className = "px-4 py-2 rounded-xl text-xs sm:text-sm font-bold font-hindi transition flex items-center gap-2 text-stone-600 hover:text-stone-900";
+
+        // Style Mobile Nav
+        mobileNavStore.className = "flex-1 py-1.5 text-xs font-bold font-hindi rounded-lg bg-emerald-700 text-white flex items-center justify-center gap-1.5";
+        mobileNavDairy.className = "flex-1 py-1.5 text-xs font-bold font-hindi rounded-lg bg-stone-100 text-stone-700 border border-stone-200 flex items-center justify-center gap-1.5";
+      } else {
+        // Show Dairy, Hide Store
+        viewStore.classList.add('hidden');
+        viewDairy.classList.remove('hidden');
+        storeDairyBanner.classList.add('hidden');
+        dairyBackBanner.classList.remove('hidden');
+
+        // Style Desktop Nav
+        navTabDairy.className = "px-4 py-2 rounded-xl text-xs sm:text-sm font-bold font-hindi transition flex items-center gap-2 bg-blue-700 text-white shadow-sm";
+        navTabStore.className = "px-4 py-2 rounded-xl text-xs sm:text-sm font-bold font-hindi transition flex items-center gap-2 text-stone-600 hover:text-stone-900";
+
+        // Style Mobile Nav
+        mobileNavDairy.className = "flex-1 py-1.5 text-xs font-bold font-hindi rounded-lg bg-blue-700 text-white flex items-center justify-center gap-1.5";
+        mobileNavStore.className = "flex-1 py-1.5 text-xs font-bold font-hindi rounded-lg bg-stone-100 text-stone-700 border border-stone-200 flex items-center justify-center gap-1.5";
+      }
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Render Store Items
+    function renderStoreProducts() {
+      const container = document.getElementById('store-products-grid');
+      container.innerHTML = '';
+
+      const filtered = storeProducts.filter(item => {
+        const matchesCategory = (storeCategoryFilter === 'all') || (item.category === storeCategoryFilter);
+        const matchesSearch = item.name.toLowerCase().includes(storeSearch.toLowerCase()) || 
+                              item.desc.toLowerCase().includes(storeSearch.toLowerCase()) ||
+                              item.tag.toLowerCase().includes(storeSearch.toLowerCase());
+        return matchesCategory && matchesSearch;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div class="col-span-full py-10 text-center bg-white rounded-2xl border border-dashed border-stone-300">
+            <span class="text-3xl">🔍</span>
+            <p class="text-sm font-bold font-hindi text-stone-700 mt-2">कोई किराना सामान नहीं मिला</p>
+            <p class="text-xs text-stone-400 font-hindi">कृपया दूसरा नाम सर्च करें या 'सभी सामान' पर क्लिक करें।</p>
+          </div>
+        `;
+        return;
+      }
+
+      filtered.forEach(p => {
+        container.appendChild(createProductCard(p, false));
+      });
+    }
+
+    // Render Dedicated Dairy Page Items
+    function renderDairyProducts() {
+      const container = document.getElementById('dairy-products-grid');
+      container.innerHTML = '';
+
+      const filtered = dairyProducts.filter(item => {
+        const matchesCategory = (dairyCategoryFilter === 'all') || (item.category === dairyCategoryFilter);
+        const matchesSearch = item.name.toLowerCase().includes(dairySearch.toLowerCase()) || 
+                              item.desc.toLowerCase().includes(dairySearch.toLowerCase()) ||
+                              item.tag.toLowerCase().includes(dairySearch.toLowerCase());
+        return matchesCategory && matchesSearch;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div class="col-span-full py-10 text-center bg-white rounded-2xl border border-dashed border-stone-300">
+            <span class="text-3xl">🥛</span>
+            <p class="text-sm font-bold font-hindi text-stone-700 mt-2">कोई डेयरी उत्पाद नहीं मिला</p>
+            <p class="text-xs text-stone-400 font-hindi">कृपया दूसरा नाम खोजें।</p>
+          </div>
+        `;
+        return;
+      }
+
+      filtered.forEach(p => {
+        container.appendChild(createProductCard(p, true));
+      });
+    }
+
+    // Create Reusable Product Card
+    function createProductCard(product, isDairy) {
+      const qty = cart[product.id] || 0;
+      const card = document.createElement('div');
+      card.className = `bg-white rounded-2xl border ${isDairy ? 'border-blue-200 hover:border-blue-400' : 'border-stone-200 hover:border-stone-400'} shadow-sm hover:shadow-md transition p-4 flex flex-col justify-between`;
+
+      card.innerHTML = `
+        <div>
+          <div class="flex items-start justify-between gap-2 mb-2">
+            <span class="text-3xl p-2 rounded-xl ${isDairy ? 'bg-blue-50' : 'bg-stone-50'}">${product.icon}</span>
+            <span class="text-[10px] font-bold px-2 py-0.5 rounded-full ${isDairy ? 'bg-blue-100 text-blue-900' : 'bg-stone-100 text-stone-700'} font-hindi">
+              ${product.tag}
+            </span>
+          </div>
+
+          <h4 class="font-bold text-sm text-stone-900 font-hindi leading-snug">${product.name}</h4>
+          <p class="text-xs text-stone-400 font-hindi mt-0.5">${product.weight}</p>
+          <p class="text-[11px] text-stone-500 font-hindi mt-1.5 line-clamp-2">${product.desc}</p>
+        </div>
+
+        <div class="pt-4 mt-3 border-t border-stone-100 flex items-center justify-between">
+          <div>
+            <div class="flex items-baseline gap-1.5">
+              <span class="text-base font-extrabold text-stone-900 font-sans">₹${product.price}</span>
+              ${product.mrp > product.price ? `<span class="text-xs text-stone-400 line-through font-sans">₹${product.mrp}</span>` : ''}
+            </div>
+            ${product.mrp > product.price ? `<span class="text-[10px] text-emerald-600 font-bold font-hindi">बचत: ₹${product.mrp - product.price}</span>` : ''}
+          </div>
+
+          <!-- Quantity / Add Button -->
+          <div>
+            ${qty > 0 ? `
+              <div class="flex items-center bg-stone-100 rounded-xl border border-stone-300 overflow-hidden">
+                <button onclick="updateCartItem('${product.id}', -1)" class="w-7 h-7 flex items-center justify-center text-stone-700 hover:bg-stone-200 font-bold transition">−</button>
+                <span class="w-6 text-center text-xs font-bold font-sans">${qty}</span>
+                <button onclick="updateCartItem('${product.id}', 1)" class="w-7 h-7 flex items-center justify-center ${isDairy ? 'text-blue-700' : 'text-emerald-700'} hover:bg-stone-200 font-bold transition">+</button>
+              </div>
+            ` : `
+              <button 
+                onclick="updateCartItem('${product.id}', 1)" 
+                class="${isDairy ? 'bg-blue-600 hover:bg-blue-700' : 'bg-emerald-600 hover:bg-emerald-700'} text-white text-xs font-bold px-3 py-1.5 rounded-xl transition flex items-center gap-1 font-hindi shadow-sm"
+              >
+                <i class="fa-solid fa-plus text-[10px]"></i>
+                <span>जोड़ें</span>
+              </button>
+            `}
+          </div>
+        </div>
+      `;
+      return card;
+    }
+
+    // Update Quantity
+    function updateCartItem(productId, change) {
+      const current = cart[productId] || 0;
+      const next = current + change;
+
+      if (next <= 0) {
+        delete cart[productId];
+      } else {
+        cart[productId] = next;
+      }
+
+      saveCartState();
+      renderStoreProducts();
+      renderDairyProducts();
+      recalculateCart();
+    }
+
+    function saveCartState() {
+      localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
+    }
+
+    function clearEntireCart() {
+      if (Object.keys(cart).length === 0) return;
+      cart = {};
+      saveCartState();
+      renderStoreProducts();
+      renderDairyProducts();
+      recalculateCart();
+    }
+
+    // Recalculate Live Side Calculator (General Store + Dairy Items Combined)
+    function recalculateCart() {
+      let subtotal = 0;
+      let totalMRP = 0;
+      let totalCount = 0;
+      const itemsListHtml = [];
+
+      for (const [id, qty] of Object.entries(cart)) {
+        const prod = allProducts.find(p => p.id === id);
+        if (!prod) continue;
+
+        const itemSubtotal = prod.price * qty;
+        const itemMRP = prod.mrp * qty;
+        subtotal += itemSubtotal;
+        totalMRP += itemMRP;
+        totalCount += qty;
+
+        const isDairy = prod.section === 'dairy';
+
+        itemsListHtml.push(`
+          <div class="py-2 flex items-center justify-between gap-2">
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-1">
+                <span class="text-xs">${isDairy ? '🥛' : '🛒'}</span>
+                <p class="text-xs font-bold text-stone-800 truncate font-hindi">${prod.name}</p>
+              </div>
+              <p class="text-[11px] text-stone-500 font-sans">
+                ₹${prod.price} × ${qty} = <strong class="text-stone-900">₹${itemSubtotal}</strong>
+                ${isDairy ? '<span class="text-[9px] text-blue-700 bg-blue-50 px-1 py-0.2 rounded ml-1 font-hindi">डेयरी</span>' : ''}
+              </p>
+            </div>
+            <div class="flex items-center bg-stone-100 rounded-lg border border-stone-200">
+              <button onclick="updateCartItem('${prod.id}', -1)" class="w-6 h-6 flex items-center justify-center text-xs text-stone-600 hover:bg-stone-200 font-bold">−</button>
+              <span class="w-5 text-center text-xs font-bold">${qty}</span>
+              <button onclick="updateCartItem('${prod.id}', 1)" class="w-6 h-6 flex items-center justify-center text-xs text-emerald-700 hover:bg-stone-200 font-bold">+</button>
+            </div>
+          </div>
+        `);
+      }
+
+      const savings = Math.max(0, totalMRP - subtotal);
+      const deliveryFee = 0; // Free inside Mushakhand
+      const grandTotal = subtotal + deliveryFee;
+
+      // Update Desktop Table
+      const desktopList = document.getElementById('desktop-cart-items');
+      const mobileList = document.getElementById('mobile-drawer-items');
+      const orderBtn = document.getElementById('desktop-whatsapp-order-btn');
+
+      if (itemsListHtml.length === 0) {
+        const emptyState = `
+          <div class="py-8 text-center text-stone-400">
+            <i class="fa-solid fa-receipt text-3xl mb-1 text-stone-300"></i>
+            <p class="text-xs font-hindi">आपकी पर्ची अभी खाली है</p>
+            <p class="text-[11px] font-hindi text-stone-400">किराना या डेयरी से सामान "जोड़ें"</p>
+          </div>
+        `;
+        desktopList.innerHTML = emptyState;
+        mobileList.innerHTML = emptyState;
+        orderBtn.disabled = true;
+      } else {
+        desktopList.innerHTML = itemsListHtml.join('');
+        mobileList.innerHTML = itemsListHtml.join('');
+        orderBtn.disabled = false;
+      }
+
+      // Populate Totals
+      document.getElementById('calc-subtotal').textContent = `₹${subtotal}`;
+      document.getElementById('calc-delivery').textContent = `₹0 (फ्री)`;
+      document.getElementById('calc-savings').textContent = `₹${savings}`;
+      document.getElementById('calc-grand-total').textContent = `₹${grandTotal}`;
+
+      // Populate Mobile Bar
+      document.getElementById('mobile-total-price').textContent = `₹${grandTotal}`;
+      document.getElementById('mobile-items-count').textContent = totalCount;
+      document.getElementById('mobile-cart-badge').textContent = totalCount;
+
+      document.getElementById('mobile-calc-subtotal').textContent = `₹${subtotal}`;
+      document.getElementById('mobile-calc-savings').textContent = `₹${savings}`;
+      document.getElementById('mobile-calc-grand-total').textContent = `₹${grandTotal}`;
+    }
+
+    // Filter Buttons - Store
+    function filterStoreCategory(cat) {
+      storeCategoryFilter = cat;
+      document.querySelectorAll('.store-filter-btn').forEach(btn => {
+        if (btn.getAttribute('data-filter') === cat) {
+          btn.className = 'store-filter-btn px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap transition bg-stone-900 text-white';
+        } else {
+          btn.className = 'store-filter-btn px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap transition bg-white text-stone-700 border border-stone-200 hover:bg-stone-50';
+        }
+      });
+      renderStoreProducts();
+    }
+
+    // Filter Buttons - Dairy
+    function filterDairyCategory(cat) {
+      dairyCategoryFilter = cat;
+      document.querySelectorAll('.dairy-filter-btn').forEach(btn => {
+        if (btn.getAttribute('data-dairyfilter') === cat) {
+          btn.className = 'dairy-filter-btn px-4 py-1.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap transition bg-parag-700 text-white';
+        } else {
+          btn.className = 'dairy-filter-btn px-4 py-1.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap transition bg-white text-stone-700 border border-stone-200 hover:bg-stone-50';
+        }
+      });
+      renderDairyProducts();
+    }
+
+    // Search Functions
+    function searchStoreProducts() {
+      storeSearch = document.getElementById('store-search-input').value.trim();
+      renderStoreProducts();
+    }
+
+    function searchDairyProducts() {
+      dairySearch = document.getElementById('dairy-search-input').value.trim();
+      renderDairyProducts();
+    }
+
+    // Mobile Drawer Toggle
+    function toggleMobileCartDrawer() {
+      const drawer = document.getElementById('mobile-cart-drawer');
+      drawer.classList.toggle('hidden');
+    }
+
+    // WhatsApp 1-Click Order to 9935061954
+    function sendWhatsAppOrder(source) {
+      if (Object.keys(cart).length === 0) {
+        alert('कृपया पहले अपनी पर्ची में किराना या डेयरी का सामान जोड़ें!');
+        return;
+      }
+
+      const address = source === 'desktop'
+        ? document.getElementById('cust-address-desktop').value.trim()
+        : document.getElementById('cust-address-mobile').value.trim();
+
+      let grandTotal = 0;
+      let storeItemsList = [];
+      let dairyItemsList = [];
+
+      for (const [id, qty] of Object.entries(cart)) {
+        const prod = allProducts.find(p => p.id === id);
+        if (prod) {
+          const itemTotal = prod.price * qty;
+          grandTotal += itemTotal;
+          const line = `• ${prod.name} (${prod.weight}) x ${qty} = ₹${itemTotal}`;
+          if (prod.section === 'dairy') {
+            dairyItemsList.push(line);
+          } else {
+            storeItemsList.push(line);
+          }
+        }
+      }
+
+      let orderBody = '';
+      if (storeItemsList.length > 0) {
+        orderBody += `\n🛒 *किराना व स्नैक्स सामान:*\n${storeItemsList.join('\n')}\n`;
+      }
+      if (dairyItemsList.length > 0) {
+        orderBody += `\n🥛 *पराग व सुजीत डेयरी उत्पाद:*\n${dairyItemsList.join('\n')}\n`;
+      }
+
+      const message = 
+`*नमस्ते सुजीत भैया (सुजीत जनरल स्टोर - कबीर उद्यम)*
+📍 *स्थान:* मूसाखांड, यूपी, इंडिया
+-----------------------------------
+📋 *ग्राहक की संयुक्त ऑर्डर पर्ची (Kirana + Dairy):*
+${orderBody}
+-----------------------------------
+💰 *कुल देय राशि (Grand Total): ₹${grandTotal}*
+${address ? `🏠 *डिलीवरी पता:* ${address}` : `🏠 *डिलीवरी पता:* मूसाखांड लोकल डिलीवरी`}
+-----------------------------------
+कृपया यह सामान जल्द से जल्द तैयार करवा दें। धन्यवाद!`;
+
+      const whatsappUrl = `https://wa.me/919935061954?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_blank');
+    }
+  </script>
+</body>
+</html>
